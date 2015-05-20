@@ -9,14 +9,18 @@ add_action( 'init', 'doc_add_shortcake' );
  */
 function doc_add_shortcake() {
 
+	/* Make sure the Shortcake plugin https://github.com/fusioneng/Shortcake is active. */
+if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) ) 
+	return;
+
 	/**
 	 * PANEL
 	 */
 	shortcode_ui_register_for_shortcode(
-		'panel',
+		'block',
 		array(
 
-			'label' => 'Panel',
+			'label' => 'Block',
 
 			'listItemImage' => 'dashicons-info',
 
@@ -24,8 +28,8 @@ function doc_add_shortcake() {
 			// Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
 			'attrs' => array(
 				array(
-					'label' => 'Panel Type',
-					'attr'  => 'type',
+					'label' => 'Block Type',
+					'attr'  => 'blocktype',
 					'type'  => 'select',
                     'options' => array(
                     	''		=> __( 'Highlight', 'doc' ),
@@ -43,6 +47,93 @@ function doc_add_shortcake() {
 				array(
 					'label' => 'Content',
 					'attr'  => 'message',
+					'type'  => 'textarea',
+				),
+			),
+		)
+	);
+
+
+
+
+	/**
+	 * PANEL
+	 */
+	shortcode_ui_register_for_shortcode(
+		'featurerow',
+		array(
+
+			'label' => 'Feature Row',
+
+			'listItemImage' => 'dashicons-editor-insertmore',
+
+			// Attribute model expects 'attr', 'type' and 'label'
+			// Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
+			'attrs' => array(
+				array(
+					'label' => 'Icon',
+					'attr'  => 'icon1',
+					'type'  => 'select',
+                    'options' => array(
+                    	''		=> __( 'Highlight', 'doc' ),
+						'info'		=> __( 'Information', 'doc' ),
+						'warning'		=> __( 'Warning', 'doc' ),
+						'important'	=> __( 'Important', 'doc' ),
+					),
+				),
+				array(
+					'label' => 'Heading',
+					'attr'  => 'heading1',
+					'type'  => 'text',
+					'description' => 'Optional',
+				),
+				array(
+					'label' => 'Content',
+					'attr'  => 'message1',
+					'type'  => 'textarea',
+				),
+				array(
+					'label' => 'Icon',
+					'attr'  => 'icon2',
+					'type'  => 'select',
+                    'options' => array(
+                    	''		=> __( 'Highlight', 'doc' ),
+						'info'		=> __( 'Information', 'doc' ),
+						'warning'		=> __( 'Warning', 'doc' ),
+						'important'	=> __( 'Important', 'doc' ),
+					),
+				),
+				array(
+					'label' => 'Heading',
+					'attr'  => 'heading2',
+					'type'  => 'text',
+					'description' => 'Optional',
+				),
+				array(
+					'label' => 'Content',
+					'attr'  => 'message2',
+					'type'  => 'textarea',
+				),
+				array(
+					'label' => 'Icon',
+					'attr'  => 'icon3',
+					'type'  => 'select',
+                    'options' => array(
+                    	''		=> __( 'Highlight', 'doc' ),
+						'info'		=> __( 'Information', 'doc' ),
+						'warning'		=> __( 'Warning', 'doc' ),
+						'important'	=> __( 'Important', 'doc' ),
+					),
+				),
+				array(
+					'label' => 'Heading',
+					'attr'  => 'heading3',
+					'type'  => 'text',
+					'description' => 'Optional',
+				),
+				array(
+					'label' => 'Content',
+					'attr'  => 'message3',
 					'type'  => 'textarea',
 				),
 			),
@@ -95,7 +186,7 @@ function doc_add_shortcake() {
             'attrs' => array(
             	array(
                     'label' => 'Button Type',
-                    'attr'  => 'type',
+                    'attr'  => 'buttontype',
                     'type'  => 'select',
                     'options' => array(
                     	'btn'		=> __( 'General', 'doc' ),

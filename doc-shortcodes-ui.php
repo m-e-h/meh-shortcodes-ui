@@ -9,8 +9,4 @@
  */
 
 require_once( 'inc/shortcodes.php' );
-
-/* Make sure the Shortcake plugin https://github.com/fusioneng/Shortcake is active. */
-if( class_exists( 'Shortcode_UI' ) ) {
-	require_once( 'inc/shortcode-ui-init.php' );
-}
+require_once( 'inc/shortcode-ui-init.php' );
