@@ -60,13 +60,14 @@ function doc_featurerow_shortcode( $attr ) {
 		), $attr )
 	);
 
-	ob_start();
-
-	$return = '<aside class="grid flex flex--row">';
+	$return = '';
+	$return .= '<aside class="grid flex flex--row">';
 
 	$return .= '<section class="u-pr- u-pr@md u-pr+@lg u-mb- u-mb@md u-mb+@lg grid__item grid__item--flexed"><div class="br u-p@all t-bg__1">';
 
-	$return .= '<div class="block__icon"><i class="fa fa-heart"></i></div>';
+	$return .= '<div class="block__icon">';
+	$return .= get_template_part( 'images/vector/svg', 'sports' );
+	$return .= '</div>';
 	$return .= '<h4 class="block__header">'.$heading1.'</h4>';
 	$return .= '<p class="text-muted">'.$message1.'</p>';
 
@@ -74,7 +75,9 @@ function doc_featurerow_shortcode( $attr ) {
 
 	$return .= '<section class="u-pr- u-pr@md u-pr+@lg u-mb- u-mb@md u-mb+@lg grid__item grid__item--flexed"><div class="br u-p@all t-bg__1">';
 
-	$return .= '<div class="block__icon"><i class="fa fa-heart"></i></div>';
+	$return .= '<div class="block__icon">';
+	$return .= get_template_part( 'images/vector/svg', 'sports' );
+	$return .= '</div>';
 	$return .= '<h4 class="block__header">'.$heading2.'</h4>';
 	$return .= '<p class="text-muted">'.$message2.'</p>';
 
@@ -82,7 +85,9 @@ function doc_featurerow_shortcode( $attr ) {
 
 	$return .= '<section class="u-pr- u-pr@md u-pr+@lg u-mb- u-mb@md u-mb+@lg grid__item grid__item--flexed"><div class="br u-p@all t-bg__1">';
 
-	$return .= '<div class="block__icon"><i class="fa fa-heart"></i></div>';
+	$return .= '<div class="block__icon">';
+	$return .= get_template_part( 'images/vector/svg', 'sports' );
+	$return .= '</div>';
 	$return .= '<h4 class="block__header">'.$heading3.'</h4>';
 	$return .= '<p class="text-muted">'.$message3.'</p>';
 
@@ -92,7 +97,6 @@ function doc_featurerow_shortcode( $attr ) {
 
 	return $return;
 
-	return ob_get_clean();
 }
 
 
