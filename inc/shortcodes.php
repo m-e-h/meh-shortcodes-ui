@@ -39,7 +39,9 @@ function doc_block_shortcode( $attr ) {
 }
 
 
-
+function tp_icon( $icon ) {
+	return get_template_part( 'images/vector/svg', $icon );
+}
 
 /**
  * FEATURE ROW
@@ -60,34 +62,41 @@ function doc_featurerow_shortcode( $attr ) {
 		), $attr )
 	);
 
+ob_start();
+get_template_part( 'images/vector/svg', $icon1 );
+$part1 = ob_get_clean();
+
+ob_start();
+get_template_part( 'images/vector/svg', $icon2 );
+$part2 = ob_get_clean();
+
+ob_start();
+get_template_part( 'images/vector/svg', $icon3 );
+$part3 = ob_get_clean();
+
+
 	$return = '';
 	$return .= '<aside class="grid flex flex--row">';
 
-	$return .= '<section class="u-pr- u-pr@md u-pr+@lg u-mb- u-mb@md u-mb+@lg grid__item grid__item--flexed"><div class="br u-p@all t-bg__1">';
+	$return .= '<section class="u-pr- u-pr@md u-pr+@lg u-mb- u-mb@md u-mb+@lg grid__item grid__item--flexed"><div class="wrap">';
 
-	$return .= '<div class="block__icon">';
-	$return .= get_template_part( 'images/vector/svg', 'sports' );
-	$return .= '</div>';
+	$return .= '<div class="block__icon">' . tp_icon( $icon1 ) . '</div>';
 	$return .= '<h4 class="block__header">'.$heading1.'</h4>';
 	$return .= '<p class="text-muted">'.$message1.'</p>';
 
 	$return .= '</div></section>';
 
-	$return .= '<section class="u-pr- u-pr@md u-pr+@lg u-mb- u-mb@md u-mb+@lg grid__item grid__item--flexed"><div class="br u-p@all t-bg__1">';
+	$return .= '<section class="u-pr- u-pr@md u-pr+@lg u-mb- u-mb@md u-mb+@lg grid__item grid__item--flexed"><div class="wrap">';
 
-	$return .= '<div class="block__icon">';
-	$return .= get_template_part( 'images/vector/svg', 'sports' );
-	$return .= '</div>';
+	$return .= '<div class="block__icon">' . $part2 . '</div>';
 	$return .= '<h4 class="block__header">'.$heading2.'</h4>';
 	$return .= '<p class="text-muted">'.$message2.'</p>';
 
 	$return .= '</div></section>';
 
-	$return .= '<section class="u-pr- u-pr@md u-pr+@lg u-mb- u-mb@md u-mb+@lg grid__item grid__item--flexed"><div class="br u-p@all t-bg__1">';
+	$return .= '<section class="u-pr- u-pr@md u-pr+@lg u-mb- u-mb@md u-mb+@lg grid__item grid__item--flexed"><div class="wrap">';
 
-	$return .= '<div class="block__icon">';
-	$return .= get_template_part( 'images/vector/svg', 'sports' );
-	$return .= '</div>';
+	$return .= '<div class="block__icon">' . $part3 . '</div>';
 	$return .= '<h4 class="block__header">'.$heading3.'</h4>';
 	$return .= '<p class="text-muted">'.$message3.'</p>';
 

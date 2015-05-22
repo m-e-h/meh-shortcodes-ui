@@ -32,10 +32,10 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
 					'attr'  => 'blocktype',
 					'type'  => 'select',
                     'options' => array(
-                    	''		=> __( 'Highlight', 'doc' ),
-						'info'		=> __( 'Information', 'doc' ),
-						'warning'		=> __( 'Warning', 'doc' ),
-						'important'	=> __( 'Important', 'doc' ),
+                    	''		=> __( 'svg', 'doc' ),
+						'video'		=> __( 'video', 'doc' ),
+						'quote'		=> __( 'quote', 'doc' ),
+						'link'	=> __( 'link', 'doc' ),
 					),
 				),
 				array(
@@ -75,10 +75,10 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
 					'attr'  => 'icon1',
 					'type'  => 'select',
                     'options' => array(
-                    	''		=> __( 'Highlight', 'doc' ),
-						'info'		=> __( 'Information', 'doc' ),
-						'warning'		=> __( 'Warning', 'doc' ),
-						'important'	=> __( 'Important', 'doc' ),
+                    	''		=> __( 'svg', 'doc' ),
+						'video'		=> __( 'video', 'doc' ),
+						'quote'		=> __( 'quote', 'doc' ),
+						'link'	=> __( 'link', 'doc' ),
 					),
 				),
 				array(
@@ -97,10 +97,10 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
 					'attr'  => 'icon2',
 					'type'  => 'select',
                     'options' => array(
-                    	''		=> __( 'Highlight', 'doc' ),
-						'info'		=> __( 'Information', 'doc' ),
-						'warning'		=> __( 'Warning', 'doc' ),
-						'important'	=> __( 'Important', 'doc' ),
+                    	''		=> __( 'svg', 'doc' ),
+						'video'		=> __( 'video', 'doc' ),
+						'quote'		=> __( 'quote', 'doc' ),
+						'link'	=> __( 'link', 'doc' ),
 					),
 				),
 				array(
@@ -119,10 +119,10 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
 					'attr'  => 'icon3',
 					'type'  => 'select',
                     'options' => array(
-                    	''		=> __( 'Highlight', 'doc' ),
-						'info'		=> __( 'Information', 'doc' ),
-						'warning'		=> __( 'Warning', 'doc' ),
-						'important'	=> __( 'Important', 'doc' ),
+                    	''		=> __( 'svg', 'doc' ),
+						'video'		=> __( 'video', 'doc' ),
+						'quote'		=> __( 'quote', 'doc' ),
+						'link'	=> __( 'link', 'doc' ),
 					),
 				),
 				array(
