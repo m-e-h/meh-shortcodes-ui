@@ -1,23 +1,23 @@
 <?php
 
-add_action( 'init', 'doc_add_shortcake' );
+add_action( 'init', 'meh_add_shortcake' );
 
 
 /**
  * SHORTCAKE
  * https://github.com/fusioneng/Shortcake
  */
-function doc_add_shortcake() {
+function meh_add_shortcake() {
 
 	/* Make sure the Shortcake plugin https://github.com/fusioneng/Shortcake is active. */
-if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) ) 
+if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
 	return;
 
 	/**
 	 * PANEL
 	 */
 	shortcode_ui_register_for_shortcode(
-		'block',
+		'meh_block',
 		array(
 
 			'label' => 'Block',
@@ -28,27 +28,43 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
 			// Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
 			'attrs' => array(
 				array(
-					'label' => 'Block Type',
-					'attr'  => 'blocktype',
-					'type'  => 'select',
-                    'options' => array(
-                    	''		=> __( 'svg', 'doc' ),
-						'video'		=> __( 'video', 'doc' ),
-						'quote'		=> __( 'quote', 'doc' ),
-						'link'	=> __( 'link', 'doc' ),
-					),
-				),
-				array(
 					'label' => 'Heading',
 					'attr'  => 'heading',
 					'type'  => 'text',
-					'description' => 'Optional',
 				),
+                array(
+                    'label' => 'Icon',
+                    'attr'  => 'icon',
+                    'type' => 'select',
+                    'options' => array(
+                        'quote' => 'Quote',
+                        'calendar' => 'Calendar',
+                        'church' => 'Church',
+                        'sports' => 'Sports',
+                        'image' => 'Image',
+                        'chat' => 'Chat',
+                    ),
+                ),
 				array(
 					'label' => 'Content',
-					'attr'  => 'message',
+					'attr'  => 'content',
 					'type'  => 'textarea',
 				),
+                array(
+                    'label' => 'Footer Link',
+                    'attr'  => 'footer',
+                    'type'  => 'text',
+                ),
+                array(
+                    'label' => 'Width',
+                    'attr'  => 'width',
+                    'type' => 'select',
+                    'options' => array(
+                        'u-1of1@md' => 'Full Width',
+                        'u-1of3@md' => 'One Third',
+                        'u-1of4@md' => 'One Fourth',
+                    ),
+                ),
 			),
 		)
 	);
@@ -75,10 +91,10 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
 					'attr'  => 'icon1',
 					'type'  => 'select',
                     'options' => array(
-                    	''		=> __( 'svg', 'doc' ),
-						'video'		=> __( 'video', 'doc' ),
-						'quote'		=> __( 'quote', 'doc' ),
-						'link'	=> __( 'link', 'doc' ),
+                    	''		=> __( 'svg', 'meh' ),
+						'video'		=> __( 'video', 'meh' ),
+						'quote'		=> __( 'quote', 'meh' ),
+						'link'	=> __( 'link', 'meh' ),
 					),
 				),
 				array(
@@ -97,10 +113,10 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
 					'attr'  => 'icon2',
 					'type'  => 'select',
                     'options' => array(
-                    	''		=> __( 'svg', 'doc' ),
-						'video'		=> __( 'video', 'doc' ),
-						'quote'		=> __( 'quote', 'doc' ),
-						'link'	=> __( 'link', 'doc' ),
+                    	''		=> __( 'svg', 'meh' ),
+						'video'		=> __( 'video', 'meh' ),
+						'quote'		=> __( 'quote', 'meh' ),
+						'link'	=> __( 'link', 'meh' ),
 					),
 				),
 				array(
@@ -119,10 +135,10 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
 					'attr'  => 'icon3',
 					'type'  => 'select',
                     'options' => array(
-                    	''		=> __( 'svg', 'doc' ),
-						'video'		=> __( 'video', 'doc' ),
-						'quote'		=> __( 'quote', 'doc' ),
-						'link'	=> __( 'link', 'doc' ),
+                    	''		=> __( 'svg', 'meh' ),
+						'video'		=> __( 'video', 'meh' ),
+						'quote'		=> __( 'quote', 'meh' ),
+						'link'	=> __( 'link', 'meh' ),
 					),
 				),
 				array(
@@ -189,11 +205,11 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
                     'attr'  => 'buttontype',
                     'type'  => 'select',
                     'options' => array(
-                    	'btn'		=> __( 'General', 'doc' ),
-						'info'		=> __( 'Information', 'doc' ),
-						'form'		=> __( 'Form', 'doc' ),
-						'donate'	=> __( 'Donate', 'doc' ),
-						'link-ext'	=> __( 'External Link', 'doc' ),
+                    	'btn'		=> __( 'General', 'meh' ),
+						'info'		=> __( 'Information', 'meh' ),
+						'form'		=> __( 'Form', 'meh' ),
+						'donate'	=> __( 'Donate', 'meh' ),
+						'link-ext'	=> __( 'External Link', 'meh' ),
 					),
                 ),
                 array(
