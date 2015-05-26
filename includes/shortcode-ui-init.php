@@ -22,21 +22,17 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
 
 			'label' => 'Block',
 
-			'listItemImage' => 'dashicons-info',
+			'listItemImage' => 'dashicons-slides',
 
 			// Attribute model expects 'attr', 'type' and 'label'
 			// Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
 			'attrs' => array(
-				array(
-					'label' => 'Heading',
-					'attr'  => 'heading',
-					'type'  => 'text',
-				),
                 array(
                     'label' => 'Icon',
                     'attr'  => 'icon',
                     'type' => 'select',
                     'options' => array(
+                        '' => 'None',
                         'quote' => 'Quote',
                         'calendar' => 'Calendar',
                         'church' => 'Church',
@@ -44,16 +40,25 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
                         'image' => 'Image',
                         'chat' => 'Chat',
                     ),
+                        'description' => 'Don\'t use this if you are using an image.',
+                ),
+                array(
+                    'label' => 'Heading',
+                    'attr'  => 'heading',
+                    'type'  => 'text',
+                    'description' => 'Optional',
                 ),
 				array(
 					'label' => 'Content',
 					'attr'  => 'content',
 					'type'  => 'textarea',
+                    'description' => 'Optional',
 				),
                 array(
                     'label' => 'Footer Link',
                     'attr'  => 'footer',
                     'type'  => 'text',
+                    'description' => 'Optional',
                 ),
                 array(
                     'label' => 'Width',
@@ -76,7 +81,7 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
 	 * PANEL
 	 */
 	shortcode_ui_register_for_shortcode(
-		'featurerow',
+		'meh_block_row',
 		array(
 
 			'label' => 'Feature Row',
@@ -91,11 +96,15 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
 					'attr'  => 'icon1',
 					'type'  => 'select',
                     'options' => array(
-                    	''		=> __( 'svg', 'meh' ),
-						'video'		=> __( 'video', 'meh' ),
-						'quote'		=> __( 'quote', 'meh' ),
-						'link'	=> __( 'link', 'meh' ),
+                        '' => 'None',
+                        'quote' => 'Quote',
+                        'calendar' => 'Calendar',
+                        'church' => 'Church',
+                        'sports' => 'Sports',
+                        'image' => 'Image',
+                        'chat' => 'Chat',
 					),
+                    'description' => 'Don\'t use this if you are using an image.',
 				),
 				array(
 					'label' => 'Heading',
@@ -105,19 +114,30 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
 				),
 				array(
 					'label' => 'Content',
-					'attr'  => 'message1',
+					'attr'  => 'content1',
 					'type'  => 'textarea',
+                    'description' => 'Optional',
 				),
+                array(
+                    'label' => 'Footer Link',
+                    'attr'  => 'footer1',
+                    'type'  => 'text',
+                    'description' => 'Optional',
+                ),
 				array(
 					'label' => 'Icon',
 					'attr'  => 'icon2',
 					'type'  => 'select',
                     'options' => array(
-                    	''		=> __( 'svg', 'meh' ),
-						'video'		=> __( 'video', 'meh' ),
-						'quote'		=> __( 'quote', 'meh' ),
-						'link'	=> __( 'link', 'meh' ),
+                        '' => 'None',
+                        'quote' => 'Quote',
+                        'calendar' => 'Calendar',
+                        'church' => 'Church',
+                        'sports' => 'Sports',
+                        'image' => 'Image',
+                        'chat' => 'Chat',
 					),
+                    'description' => 'Don\'t use this if you are using an image.',
 				),
 				array(
 					'label' => 'Heading',
@@ -127,19 +147,30 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
 				),
 				array(
 					'label' => 'Content',
-					'attr'  => 'message2',
+					'attr'  => 'content2',
 					'type'  => 'textarea',
+                    'description' => 'Optional',
 				),
+                array(
+                    'label' => 'Footer Link',
+                    'attr'  => 'footer2',
+                    'type'  => 'text',
+                    'description' => 'Optional',
+                ),
 				array(
 					'label' => 'Icon',
 					'attr'  => 'icon3',
 					'type'  => 'select',
                     'options' => array(
-                    	''		=> __( 'svg', 'meh' ),
-						'video'		=> __( 'video', 'meh' ),
-						'quote'		=> __( 'quote', 'meh' ),
-						'link'	=> __( 'link', 'meh' ),
+                        '' => 'None',
+                        'quote' => 'Quote',
+                        'calendar' => 'Calendar',
+                        'church' => 'Church',
+                        'sports' => 'Sports',
+                        'image' => 'Image',
+                        'chat' => 'Chat',
 					),
+                    'description' => 'Don\'t use this if you are using an image.',
 				),
 				array(
 					'label' => 'Heading',
@@ -149,9 +180,16 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
 				),
 				array(
 					'label' => 'Content',
-					'attr'  => 'message3',
+					'attr'  => 'content3',
 					'type'  => 'textarea',
+                    'description' => 'Optional',
 				),
+                array(
+                    'label' => 'Footer Link',
+                    'attr'  => 'footer3',
+                    'type'  => 'text',
+                    'description' => 'Optional',
+                ),
 			),
 		)
 	);

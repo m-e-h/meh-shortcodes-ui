@@ -5,7 +5,7 @@ add_action( 'init', 'meh_add_shortcodes' );
 function meh_add_shortcodes() {
 
 add_shortcode( 'meh_block',	'meh_block_shortcode' );
-add_shortcode( 'featurerow',	'meh_featurerow_shortcode' );
+add_shortcode( 'meh_block_row',	'meh_block_row_shortcode' );
 add_shortcode( 'pullquote',	'meh_pullquote_shortcode' );
 add_shortcode( 'buttons',	'meh_buttons_shortcode' );
 add_shortcode( 'email',	'meh_email_shortcode' );
@@ -36,6 +36,41 @@ function meh_block_shortcode( $atts, $content = null ) {
     ob_start();
 
     $template->get_template_part( 'block' );
+
+    return ob_get_clean();
+
+}
+
+
+
+
+/**
+ * BLOCK ROW
+ */
+function meh_block_row_shortcode( $atts, $content = null ) {
+
+    global $mehsc_atts;
+
+    $mehsc_atts   = shortcode_atts( array(
+        'heading1'   => '',
+        'icon1' => '',
+        'content1' => '',
+        'footer1' => '',
+        'heading2'   => '',
+        'icon2' => '',
+        'content2' => '',
+        'footer2' => '',
+        'heading3'   => '',
+        'icon3' => '',
+        'content3' => '',
+        'footer3' => ''
+    ), $atts, 'meh_block_row' );
+
+    $template = new MEHSC_Template_Loader;
+
+    ob_start();
+
+    $template->get_template_part( 'block-row' );
 
     return ob_get_clean();
 
