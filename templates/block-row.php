@@ -13,13 +13,13 @@ global $mehsc_atts;
         <?php endif; ?>
 
     <?php if( ! empty( $mehsc_atts['heading1'] ) ) : ?>
-    <h2 class="block__title t-bg__1 u-p"><?php echo esc_attr( $mehsc_atts['heading1'] ); ?></h2>
+    <h2 class="block__title u-center u-bold u-ph"><?php echo esc_attr( $mehsc_atts['heading1'] ); ?></h2>
     <?php endif; ?>
 
     <p class="block__body t-bg__1 u-p"><?php echo esc_html( $mehsc_atts['content1'] ); ?></p>
 
         <?php if( ! empty( $mehsc_atts['footer1'] ) ) : ?>
-        <div class="block__action t-bg__1--dark u-ph u-pv-">
+        <div class="block__action u-center t-bg__1--dark u-ph u-pv-">
             <a href="#"><?php echo esc_attr( $mehsc_atts['footer1'] ); ?></a>
         </div>
         <?php endif; ?>
@@ -36,13 +36,13 @@ global $mehsc_atts;
         <?php endif; ?>
 
     <?php if( ! empty( $mehsc_atts['heading2'] ) ) : ?>
-    <h2 class="block__title t-bg__1 u-p"><?php echo esc_attr( $mehsc_atts['heading2'] ); ?></h2>
+    <h2 class="block__title u-center u-bold u-ph"><?php echo esc_attr( $mehsc_atts['heading2'] ); ?></h2>
     <?php endif; ?>
 
     <p class="block__body t-bg__1 u-p"><?php echo esc_html( $mehsc_atts['content2'] ); ?></p>
 
         <?php if( ! empty( $mehsc_atts['footer2'] ) ) : ?>
-        <div class="block__action t-bg__1--dark u-ph u-pv-">
+        <div class="block__action u-center t-bg__1--dark u-ph u-pv-">
             <a href="#"><?php echo esc_attr( $mehsc_atts['footer2'] ); ?></a>
         </div>
         <?php endif; ?>
@@ -59,13 +59,13 @@ global $mehsc_atts;
         <?php endif; ?>
 
     <?php if( ! empty( $mehsc_atts['heading3'] ) ) : ?>
-    <h2 class="block__title t-bg__1 u-p"><?php echo esc_attr( $mehsc_atts['heading3'] ); ?></h2>
+    <h2 class="block__title u-center u-bold u-ph"><?php echo esc_attr( $mehsc_atts['heading3'] ); ?></h2>
     <?php endif; ?>
 
     <p class="block__body t-bg__1 u-p"><?php echo esc_html( $mehsc_atts['content3'] ); ?></p>
 
         <?php if( ! empty( $mehsc_atts['footer3'] ) ) : ?>
-        <div class="block__action t-bg__1--dark u-ph u-pv-">
+        <div class="block__action u-center t-bg__1--dark u-ph u-pv-">
             <a href="#"><?php echo esc_attr( $mehsc_atts['footer3'] ); ?></a>
         </div>
         <?php endif; ?>
