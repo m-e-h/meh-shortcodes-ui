@@ -83,22 +83,23 @@ function meh_block_row_shortcode( $atts, $content = null ) {
 /**
  * QUOTE
  */
-function meh_pullquote_shortcode( $attr ) {
+function meh_pullquote_shortcode( $atts, $content = null ) {
 
-	extract( shortcode_atts(
-		array(
+    global $mehsc_atts;
+
+    $mehsc_atts   = shortcode_atts( array(
 			'quote' => '',
 			'source' => ''
-		), $attr )
-	);
+    ), $atts, 'meh_pullquote' );
 
-	ob_start();
+    $template = new MEHSC_Template_Loader;
 
-	$return = '<blockquote class="pullquote">' .$quote. '<br/>';
-	$return .= '<cite>'.$source.'</cite></blockquote>';
-	return $return;
+    ob_start();
 
-	return ob_get_clean();
+    $template->get_template_part( 'pullquote' );
+
+    return ob_get_clean();
+
 }
 
 

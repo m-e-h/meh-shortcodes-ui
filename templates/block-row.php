@@ -2,8 +2,8 @@
 global $mehsc_atts;
 ?>
 <section class="section block-section u-pt@respond t-bg__grey--light u-mb@respond">
-<div class="block-row grid flex flex--row@md flex--wrap wrap">
-<div class="block u-mb@respond grid__item flex--1 u-pr@respond">
+<div class="block-row grid u-flex u-flex--row@md u-flex--w wrap">
+<div class="block u-mb@respond grid__item u-flexed--1 u-pr@respond">
     <div class="block__content shadow--z1 t-bg__white">
 
         <?php if( ! empty( $mehsc_atts['icon1'] ) ) : ?>
@@ -26,7 +26,7 @@ global $mehsc_atts;
     </div>
 </div>
 
-<div class="block u-mb@respond grid__item flex--1">
+<div class="block u-mb@respond grid__item u-flexed--1">
     <div class="block__content shadow--z1 t-bg__white">
 
         <?php if( ! empty( $mehsc_atts['icon2'] ) ) : ?>
@@ -49,7 +49,7 @@ global $mehsc_atts;
     </div>
 </div>
 
-<div class="block u-mb@respond grid__item flex--1 u-pl@respond">
+<div class="block u-mb@respond grid__item u-flexed--1 u-pl@respond">
     <div class="block__content shadow--z1 t-bg__white">
 
         <?php if( ! empty( $mehsc_atts['icon3'] ) ) : ?>
