@@ -16,7 +16,7 @@ global $mehsc_atts;
     <h2 class="block__title u-center u-bold u-ph"><?php echo esc_attr( $mehsc_atts['heading1'] ); ?></h2>
     <?php endif; ?>
 
-    <p class="block__body t-bg__1 u-p"><?php echo esc_html( $mehsc_atts['content1'] ); ?></p>
+    <p class="block__body t-bg__1 u-p"><?php echo wp_kses_post( $mehsc_atts['content1'] ); ?></p>
 
         <?php if( ! empty( $mehsc_atts['footer1'] ) ) : ?>
         <div class="block__action u-center t-bg__1--dark u-ph u-pv-">
@@ -39,7 +39,7 @@ global $mehsc_atts;
     <h2 class="block__title u-center u-bold u-ph"><?php echo esc_attr( $mehsc_atts['heading2'] ); ?></h2>
     <?php endif; ?>
 
-    <p class="block__body t-bg__1 u-p"><?php echo esc_html( $mehsc_atts['content2'] ); ?></p>
+    <p class="block__body t-bg__1 u-p"><?php echo wp_kses_post( $mehsc_atts['content2'] ); ?></p>
 
         <?php if( ! empty( $mehsc_atts['footer2'] ) ) : ?>
         <div class="block__action u-center t-bg__1--dark u-ph u-pv-">
@@ -62,7 +62,7 @@ global $mehsc_atts;
     <h2 class="block__title u-center u-bold u-ph"><?php echo esc_attr( $mehsc_atts['heading3'] ); ?></h2>
     <?php endif; ?>
 
-    <p class="block__body t-bg__1 u-p"><?php echo esc_html( $mehsc_atts['content3'] ); ?></p>
+    <p class="block__body t-bg__1 u-p"><?php echo wp_kses_post( $mehsc_atts['content3'] ); ?></p>
 
         <?php if( ! empty( $mehsc_atts['footer3'] ) ) : ?>
         <div class="block__action u-center t-bg__1--dark u-ph u-pv-">
